@@ -1,0 +1,11 @@
+--exclude line-too-long
+--exclude replace-create-with-var
+--exclude replace-set-variable-with-var
+--exclude no-global-variable
+--exclude unused-variable
+--exclude can-be-resource-file
+--configure too-many-calls-in-test-case:max_calls:30
+--configure too-many-calls-in-keyword:max_calls:25
+--configure too-many-test-cases:max_testcases:100
+--configure too-long-test-case:max_len:50
+--reports all
