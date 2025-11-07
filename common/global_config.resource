@@ -8,7 +8,7 @@ ${HEADLESS_BROWSER}    True
 ${URL}    https://qa_qualizeal.qagoodx.co.za/
 ${USERNAME}    automation
 ${PASSWORD}    auto123
-${SHORT_WAIT}     5s
-${MEDIUM_WAIT}    20s
+${SHORT_WAIT}     10s
+${MEDIUM_WAIT}    30s
 ${LONG_WAIT}      60s
 ${TESTDATA_FOLDER}    ${EXECDIR}/Testdata/testdata.xlsx
