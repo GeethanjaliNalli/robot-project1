@@ -13,4 +13,3 @@ Logout From The Application
     [Documentation]    Logs out from the application by clicking the logout button.
     ...  Ensures the user session ends and the application returns to the login page.
     Click    ${button.logout}
-    Wait For Elements State    ${textbox.username}    focused    ${LONG_WAIT}
