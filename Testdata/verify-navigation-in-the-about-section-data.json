@@ -1,0 +1,89 @@
+{
+  "testCaseId": "TC00002",
+  "testCaseName": "Verify Navigation in the About section",
+  "objective": "Login and navigate to each tab in 'About' Module",
+  "priority": "Medium",
+  "preconditions": {
+    "username": "valid_user_01",
+    "password": "ValidPassword123!"
+  },
+  "loginPage": {
+    "fields": [
+      "username",
+      "password"
+    ],
+    "buttons": [
+      "Login",
+      "Login with face recognition",
+      "Login with keyfob"
+    ]
+  },
+  "aboutSectionTabs": [
+    {
+      "tabName": "App info",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "Medical Aid Contracts",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "User Manual",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "Changelog",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "Services",
+      "expectedNavigation": true
+    }
+  ],
+  "edgeCases": {
+    "invalidCredentials": {
+      "username": "invalid_user",
+      "password": "WrongPass!",
+      "expectedError": "Invalid username or password."
+    },
+    "emptyFields": {
+      "username": "",
+      "password": "",
+      "expectedError": "Username and password are required."
+    },
+    "boundaryUsername": {
+      "username": "u",
+      "password": "ValidPassword123!",
+      "expectedResult": "Login fails due to username length."
+    },
+    "boundaryPassword": {
+      "username": "valid_user_01",
+      "password": "p",
+      "expectedResult": "Login fails due to password length."
+    }
+  },
+  "locators": [
+    {
+      "element": "usernameField",
+      "locator": "id=username-input"
+    },
+    {
+      "element": "passwordField",
+      "locator": "id=password-input"
+    },
+    {
+      "element": "loginButton",
+      "locator": "id=login-btn"
+    },
+    {
+      "element": "aboutSection",
+      "locator": "id=about-section"
+    },
+    {
+      "element": "tabNavigation",
+      "locator": "class=about-tab"
+    }
+  ],
+  "postconditions": {},
+  "notes": "This test data file supports the navigation and login flows for the About section, including edge cases for login validation and tab navigation."
+}
