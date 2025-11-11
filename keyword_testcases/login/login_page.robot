@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    This File has all the Test Cases related to the login page
-Resource    ../common/super.resource
+Resource    ../../common/super.resource
+Resource    ../../keywords/common_keywords.resource
 
 
 *** Test Cases ***

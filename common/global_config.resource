@@ -4,7 +4,7 @@ Documentation       This common variables file has all the common variable
 
 *** Variables ***
 ${BROWSER_NAME}    chromium
-${HEADLESS_BROWSER}    True
+${HEADLESS_BROWSER}    False
 ${URL}    https://qa_qualizeal.qagoodx.co.za/
 ${USERNAME}    automation
 ${PASSWORD}    auto123

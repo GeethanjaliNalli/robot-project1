@@ -1,0 +1,118 @@
+{"level":30,"time":"2025-11-11T15:26:32.275Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Listening on 127.0.0.1:65291"}
+{"level":30,"time":"2025-11-11T15:26:32.330Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-11-11T15:26:34.729Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-11-11T15:26:34.729Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-11-11T15:26:34.729Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-11-11T15:26:34.742Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-11-11T15:26:34.742Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-11-11T15:26:34.742Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@5fcd1d25a7a1e90515f916fa57aeb5bf\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=d65ac0f3-5482-4df7-9dc2-53df37f96674\"}"}
+{"level":30,"time":"2025-11-11T15:26:34.742Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Trace file: "}
+{"level":30,"time":"2025-11-11T15:26:34.757Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Setting default timeout for context context=72901ebb-e724-4eca-8c73-30af69b6dd40 to 60000"}
+{"level":30,"time":"2025-11-11T15:26:34.758Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Changed active context: context=72901ebb-e724-4eca-8c73-30af69b6dd40"}
+{"level":30,"time":"2025-11-11T15:26:34.758Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method newContext"}
+{"level":30,"time":"2025-11-11T15:26:34.763Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-11-11T15:26:34.764Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@5fcd1d25a7a1e90515f916fa57aeb5bf\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=72901ebb-e724-4eca-8c73-30af69b6dd40\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@388ea0f2d6da0c61c9cc143ee89ad4de\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=d65ac0f3-5482-4df7-9dc2-53df37f96674\"}"}
+{"level":30,"time":"2025-11-11T15:26:35.877Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Video path: undefined"}
+{"level":30,"time":"2025-11-11T15:26:35.878Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Changed active page"}
+{"level":30,"time":"2025-11-11T15:26:43.478Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method newPage"}
+{"level":30,"time":"2025-11-11T15:26:43.484Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-11T15:26:43.484Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with .status in page."}
+{"level":30,"time":"2025-11-11T15:26:45.461Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-11-11T15:26:45.466Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"unparsed args: e => document.activeElement === e, input[type=\"text\"], {\"timeout\": 60000.0}"}
+{"level":30,"time":"2025-11-11T15:26:45.466Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with input[type=\"text\"] in page."}
+{"level":30,"time":"2025-11-11T15:26:45.490Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-11-11T15:26:45.491Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with input[type=\"text\"] in page."}
+{"level":30,"time":"2025-11-11T15:26:45.500Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method fillText"}
+{"level":30,"time":"2025-11-11T15:26:45.506Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-11-11T15:26:45.506Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with input[type=\"password\"] in page."}
+{"level":30,"time":"2025-11-11T15:26:45.515Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method fillText"}
+{"level":30,"time":"2025-11-11T15:26:45.518Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-11T15:26:45.519Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with [type=\"submit\"] in page."}
+{"level":30,"time":"2025-11-11T15:26:45.564Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method click"}
+{"level":30,"time":"2025-11-11T15:26:45.573Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method waitForAlerts"}
+{"level":30,"time":"2025-11-11T15:26:45.575Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with [class=\"btn btn-sm btn-default mr20\"] in page."}
+{"level":30,"time":"2025-11-11T15:26:45.573Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Waiting for alert with action: dismiss, promptInput: \"\" and timeout: 60000"}
+{"level":30,"time":"2025-11-11T15:26:45.575Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-11T15:27:23.922Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method click"}
+{"level":30,"time":"2025-11-11T15:27:23.930Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2025-11-11T15:27:23.931Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with [class=\"option AnyDiaryScreen selected\"] in page."}
+{"level":30,"time":"2025-11-11T15:27:23.969Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Element [class=\"option AnyDiaryScreen selected\"] is not editable: Error: locator.isEditable: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('[class=\"option AnyDiaryScreen selected\"]')\u001b[22m\n"}
+{"level":30,"time":"2025-11-11T15:27:23.969Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Checking checked state"}
+{"level":30,"time":"2025-11-11T15:27:23.982Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method getElementStates"}
+{"level":30,"time":"2025-11-11T15:27:23.991Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-11T15:27:23.992Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with .logout in page."}
+{"level":30,"time":"2025-11-11T15:27:24.169Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method click"}
+{"level":30,"time":"2025-11-11T15:27:24.178Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method waitForAlerts"}
+{"level":30,"time":"2025-11-11T15:27:24.178Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Waiting for alert with action: dismiss, promptInput: \"\" and timeout: 60000"}
+{"level":30,"time":"2025-11-11T15:27:24.181Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-11T15:27:24.181Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with [class=\"btn btn-sm btn-default mr20\"] in page."}
+{"level":30,"time":"2025-11-11T15:27:24.462Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method click"}
+{"level":30,"time":"2025-11-11T15:27:24.475Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-11T15:27:24.475Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with .logout in page."}
+{"level":30,"time":"2025-11-11T15:27:24.755Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method click"}
+{"level":30,"time":"2025-11-11T15:27:24.763Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method waitForAlerts"}
+{"level":30,"time":"2025-11-11T15:27:24.763Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Waiting for alert with action: accept, promptInput: \"\" and timeout: 60000"}
+{"level":30,"time":"2025-11-11T15:27:24.771Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-11T15:27:24.771Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Strict mode is enabled, find Locator with [class=\"btn btn-sm btn-default mr20\"] + button in page."}
+{"level":30,"time":"2025-11-11T15:27:25.066Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method click"}
+{"level":30,"time":"2025-11-11T15:27:45.581Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Error of node method waitForAlerts"}
+================= Original suppressed error =================
+page.waitForEvent: Timeout 60000ms exceeded while waiting for event "dialog"
+=========================== logs ===========================
+waiting for event "dialog"
+============================================================
+    at waitForAlerts (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:12430:37)
+    at PlaywrightServer.waitForAlerts (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:13663:34)
+    at Object.onReceiveHalfClose (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-11-11T15:28:24.180Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Error of node method waitForAlerts"}
+================= Original suppressed error =================
+page.waitForEvent: Timeout 60000ms exceeded while waiting for event "dialog"
+=========================== logs ===========================
+waiting for event "dialog"
+============================================================
+    at waitForAlerts (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:12430:37)
+    at PlaywrightServer.waitForAlerts (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:13663:34)
+    at Object.onReceiveHalfClose (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18) {
+  name: 'TimeoutError'
+}
+=============================================================
+================= Original suppressed error =================
+{"level":30,"time":"2025-11-11T15:28:24.780Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Error of node method waitForAlerts"}
+page.waitForEvent: Timeout 60000ms exceeded while waiting for event "dialog"
+=========================== logs ===========================
+waiting for event "dialog"
+============================================================
+    at waitForAlerts (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:12430:37)
+    at PlaywrightServer.waitForAlerts (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:13663:34)
+    at Object.onReceiveHalfClose (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Geethanjali\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-11-11T15:28:24.855Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.857Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.858Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.859Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.860Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.861Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.863Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.863Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-11T15:28:24.865Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Changed active context: context=72901ebb-e724-4eca-8c73-30af69b6dd40"}
+{"level":30,"time":"2025-11-11T15:28:24.865Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Changing current active page: page=df401e63-0458-4528-9489-f8407d338bd4"}
+{"level":30,"time":"2025-11-11T15:28:24.865Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Changed active page"}
+{"level":30,"time":"2025-11-11T15:28:24.879Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-11-11T15:28:24.893Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Removed page=1652c00d-4adf-4436-b4f7-71ea5380885e from context=72901ebb-e724-4eca-8c73-30af69b6dd40 page stack"}
+{"level":30,"time":"2025-11-11T15:28:24.918Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-11-11T15:28:27.188Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-11-11T15:28:28.591Z","pid":21532,"hostname":"QZ-LT-R-CTK-395","msg":"End of node method closeAllBrowsers"}
