@@ -1,0 +1,65 @@
+{
+  "testCaseId": "TC00002-LiLo",
+  "testCaseName": "Verify Navigation in the About section",
+  "objective": "Login and navigate to each tab in 'About' Module",
+  "preconditions": [
+    "A valid user name and password combination"
+  ],
+  "priority": "Medium",
+  "expectedResult": "About Section will be closed",
+  "aboutTabs": [
+    {
+      "tabName": "Overview",
+      "locator": "//div[@id='about-overview-tab']"
+    },
+    {
+      "tabName": "Company Info",
+      "locator": "//div[@id='about-company-info-tab']"
+    },
+    {
+      "tabName": "Team",
+      "locator": "//div[@id='about-team-tab']"
+    },
+    {
+      "tabName": "Careers",
+      "locator": "//div[@id='about-careers-tab']"
+    },
+    {
+      "tabName": "Contact",
+      "locator": "//div[@id='about-contact-tab']"
+    }
+  ],
+  "loginCredentials": [
+    {
+      "username": "testuser",
+      "password": "Test@1234"
+    },
+    {
+      "username": "edgecaseuser",
+      "password": "Edge@0000"
+    }
+  ],
+  "edgeCases": [
+    {
+      "description": "Navigate to About section with minimum permissions",
+      "username": "readonlyuser",
+      "password": "Read@123"
+    },
+    {
+      "description": "Navigate to About section with maximum permissions",
+      "username": "adminuser",
+      "password": "Admin@321"
+    }
+  ],
+  "postConditions": [],
+  "locators": [
+    {
+      "element": "About Section Button",
+      "locator": "//button[@id='about-section-btn']"
+    },
+    {
+      "element": "Close About Section",
+      "locator": "//button[@id='close-about-section']"
+    }
+  ]
+}
