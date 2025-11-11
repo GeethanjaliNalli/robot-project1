@@ -1,0 +1,121 @@
+{
+  "testCaseId": "TC00002",
+  "testCaseName": "Verify Navigation in the About section",
+  "module": "About",
+  "objective": "Login and navigate to each tab in 'About' Module",
+  "priority": "Medium",
+  "preconditions": [
+    "A valid user name and password combination"
+  ],
+  "testData": {
+    "login": {
+      "validCredentials": [
+        {
+          "username": "testuser1",
+          "password": "Password123!"
+        },
+        {
+          "username": "edgecaseuser",
+          "password": "P@ssw0rd!"
+        }
+      ],
+      "invalidCredentials": [
+        {
+          "username": "",
+          "password": "Password123!",
+          "description": "Empty username"
+        },
+        {
+          "username": "testuser1",
+          "password": "",
+          "description": "Empty password"
+        },
+        {
+          "username": "invaliduser",
+          "password": "wrongpass",
+          "description": "Invalid username and password"
+        }
+      ]
+    },
+    "aboutTabs": [
+      {
+        "tabName": "App Info",
+        "expectedTitle": "Application Information",
+        "edgeCases": [
+          "Tab not loaded",
+          "Tab content missing"
+        ]
+      },
+      {
+        "tabName": "Medical Aid Contracts",
+        "expectedTitle": "Medical Aid Contracts",
+        "edgeCases": [
+          "Tab not clickable",
+          "Tab loads slowly"
+        ]
+      },
+      {
+        "tabName": "User Manual",
+        "expectedTitle": "User Manual",
+        "edgeCases": [
+          "Tab content not displayed"
+        ]
+      },
+      {
+        "tabName": "Changelog",
+        "expectedTitle": "Changelog",
+        "edgeCases": [
+          "Changelog missing entries"
+        ]
+      },
+      {
+        "tabName": "Services",
+        "expectedTitle": "Services",
+        "edgeCases": [
+          "Services list empty"
+        ]
+      }
+    ],
+    "aboutSection": {
+      "openMethod": "Click About from main menu",
+      "closeMethod": "Click Close or X button"
+    },
+    "loginPage": {
+      "fields": [
+        "username",
+        "password"
+      ],
+      "buttons": [
+        "Login",
+        "Login with face recognition",
+        "Login with keyfob"
+      ]
+    }
+  },
+  "locators": {
+    "loginPage": {
+      "usernameField": "//input[@id='username']",
+      "passwordField": "//input[@id='password']",
+      "loginButton": "//button[@id='loginBtn']",
+      "faceRecognitionButton": "//button[@id='faceLoginBtn']",
+      "keyfobButton": "//button[@id='keyfobLoginBtn']"
+    },
+    "aboutSection": {
+      "aboutMenu": "//a[@id='aboutMenu']",
+      "closeButton": "//button[@id='closeAbout']",
+      "tabs": {
+        "appInfo": "//a[@id='tab-app-info']",
+        "medicalAidContracts": "//a[@id='tab-medical-aid-contracts']",
+        "userManual": "//a[@id='tab-user-manual']",
+        "changelog": "//a[@id='tab-changelog']",
+        "services": "//a[@id='tab-services']"
+      }
+    }
+  },
+  "postConditions": [],
+  "metadata": {
+    "createdBy": "Test Data Architect",
+    "createdOn": "2024-06-11T00:00:00Z",
+    "description": "Test data for verifying navigation in the About section, including login scenarios, tab navigation, and locator references. Includes edge cases for login and tab navigation."
+  }
+}
