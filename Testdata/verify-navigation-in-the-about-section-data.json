@@ -1,0 +1,55 @@
+{
+  "testCaseId": "TC00002",
+  "testCaseName": "Verify Navigation in the About section",
+  "priority": "Medium",
+  "preconditions": {
+    "validUser": {
+      "username": "<valid_username>",
+      "password": "<valid_password>"
+    }
+  },
+  "locators": [
+    {
+      "name": "menuButton",
+      "description": "Button to open the main menu",
+      "locator": "<locator_value_menu_button>"
+    },
+    {
+      "name": "aboutMenuItem",
+      "description": "Menu item for About section",
+      "locator": "<locator_value_about_menu_item>"
+    },
+    {
+      "name": "aboutSectionDialog",
+      "description": "About section dialog/modal",
+      "locator": "<locator_value_about_section_dialog>"
+    },
+    {
+      "name": "closeAboutButton",
+      "description": "Button to close the About section",
+      "locator": "<locator_value_close_about_button>"
+    },
+    {
+      "name": "dashboardHome",
+      "description": "Dashboard home element to verify return after closing About",
+      "locator": "<locator_value_dashboard_home>"
+    }
+  ],
+  "testStepsSummary": "Navigate to About section via menu, verify About section opens, then close About section and verify return to dashboard.",
+  "expectedResult": "About Section will be closed and user is returned to dashboard.",
+  "edgeCases": [
+    {
+      "description": "Attempt to open About section when already open",
+      "expectedBehavior": "No duplicate About section opens; UI remains stable."
+    },
+    {
+      "description": "Close About section using ESC key (if supported)",
+      "expectedBehavior": "About section closes as expected."
+    },
+    {
+      "description": "Try to close About section without sufficient permissions",
+      "expectedBehavior": "Proper error or no action; About section remains open."
+    }
+  ],
+  "notes": "Replace <valid_username> and <valid_password> with actual test credentials. Replace <locator_value_*> with actual locator values from the object repository."
+}
