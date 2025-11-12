@@ -1,0 +1,103 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "New patient booking",
+  "description": "Test data for Diary - New patient booking",
+  "priority": "Medium",
+  "type": "Functional",
+  "preconditions": [
+    "User is logged in on the diary screen"
+  ],
+  "testData": [
+    {
+      "scenario": "Valid booking - all required fields filled",
+      "patientName": "John Doe",
+      "patientDOB": "1990-01-01",
+      "contactNumber": "+441234567890",
+      "email": "johndoe@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "10:00",
+      "diary": "Dr. Smith",
+      "reason": "New consultation",
+      "expectedResult": "Booking created with Black 'A' icon"
+    },
+    {
+      "scenario": "Edge case - missing required field (patient name)",
+      "patientName": "",
+      "patientDOB": "1990-01-01",
+      "contactNumber": "+441234567890",
+      "email": "johndoe@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "10:00",
+      "diary": "Dr. Smith",
+      "reason": "New consultation",
+      "expectedResult": "Booking NOT created; validation error shown"
+    },
+    {
+      "scenario": "Boundary - earliest possible appointment time",
+      "patientName": "Jane Smith",
+      "patientDOB": "1985-12-31",
+      "contactNumber": "+441234567891",
+      "email": "janesmith@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "08:00",
+      "diary": "Dr. Smith",
+      "reason": "Follow-up",
+      "expectedResult": "Booking created with Black 'A' icon"
+    },
+    {
+      "scenario": "Boundary - latest possible appointment time",
+      "patientName": "Bob Brown",
+      "patientDOB": "1975-06-15",
+      "contactNumber": "+441234567892",
+      "email": "bobbrown@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "17:30",
+      "diary": "Dr. Smith",
+      "reason": "Routine checkup",
+      "expectedResult": "Booking created with Black 'A' icon"
+    },
+    {
+      "scenario": "Edge case - user closes booking screen before saving",
+      "patientName": "Alice Green",
+      "patientDOB": "1992-03-22",
+      "contactNumber": "+441234567893",
+      "email": "alicegreen@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "11:00",
+      "diary": "Dr. Smith",
+      "reason": "Consultation",
+      "expectedResult": "Booking NOT created"
+    },
+    {
+      "scenario": "Edge case - invalid email format",
+      "patientName": "Tom White",
+      "patientDOB": "1988-09-09",
+      "contactNumber": "+441234567894",
+      "email": "tomwhite[at]example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "12:00",
+      "diary": "Dr. Smith",
+      "reason": "Consultation",
+      "expectedResult": "Booking NOT created; validation error shown"
+    },
+    {
+      "scenario": "Edge case - duplicate booking (same patient, same time)",
+      "patientName": "John Doe",
+      "patientDOB": "1990-01-01",
+      "contactNumber": "+441234567890",
+      "email": "johndoe@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "10:00",
+      "diary": "Dr. Smith",
+      "reason": "New consultation",
+      "expectedResult": "Booking NOT created; duplicate warning shown"
+    }
+  ],
+  "locators": [
+    "diary_screen",
+    "new_booking_button",
+    "patient_name_field",
+    "appointment_time_slot",
+    "save_booking_button"
+  ]
+}
