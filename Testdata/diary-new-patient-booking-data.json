@@ -1,0 +1,78 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "Diary_ New patient booking",
+  "description": "Test data for new patient booking in diary module.",
+  "preconditions": [
+    "User is logged in on the diary screen."
+  ],
+  "testDataSets": [
+    {
+      "description": "Valid booking with all required fields",
+      "patientName": "John Doe",
+      "patientDOB": "1990-01-01",
+      "contactNumber": "1234567890",
+      "appointmentDate": "2025-11-13",
+      "appointmentTime": "10:00",
+      "diary": "Dr. Smith",
+      "reason": "General Checkup",
+      "expectedResult": "Booking is created and visible in the selected diary with Black 'A' icon."
+    },
+    {
+      "description": "Booking with missing required field (patientName)",
+      "patientName": "",
+      "patientDOB": "1990-01-01",
+      "contactNumber": "1234567890",
+      "appointmentDate": "2025-11-13",
+      "appointmentTime": "10:00",
+      "diary": "Dr. Smith",
+      "reason": "General Checkup",
+      "expectedResult": "Booking is NOT created. User is prompted to fill required fields."
+    },
+    {
+      "description": "Booking with appointment time at boundary (start of day)",
+      "patientName": "Jane Smith",
+      "patientDOB": "1985-12-31",
+      "contactNumber": "0987654321",
+      "appointmentDate": "2025-11-13",
+      "appointmentTime": "08:00",
+      "diary": "Dr. Smith",
+      "reason": "Consultation",
+      "expectedResult": "Booking is created at the earliest slot."
+    },
+    {
+      "description": "Booking with appointment time at boundary (end of day)",
+      "patientName": "Alice Brown",
+      "patientDOB": "1975-06-15",
+      "contactNumber": "5551234567",
+      "appointmentDate": "2025-11-13",
+      "appointmentTime": "17:00",
+      "diary": "Dr. Smith",
+      "reason": "Follow-up",
+      "expectedResult": "Booking is created at the latest slot."
+    },
+    {
+      "description": "Booking cancelled before saving",
+      "patientName": "Bob White",
+      "patientDOB": "2000-03-22",
+      "contactNumber": "4445556666",
+      "appointmentDate": "2025-11-13",
+      "appointmentTime": "11:30",
+      "diary": "Dr. Smith",
+      "reason": "Routine Checkup",
+      "action": "closeWithoutSaving",
+      "expectedResult": "Booking is NOT created."
+    }
+  ],
+  "postconditions": [
+    "A booking should be made if required information was filled in and saved.",
+    "If the user closes the screen or not all required fields are filled in, NO booking should be made."
+  ],
+  "priority": "Medium",
+  "locators": [
+    "diary_screen",
+    "new_booking_button",
+    "patient_name_field",
+    "appointment_time_picker",
+    "save_button"
+  ]
+}
