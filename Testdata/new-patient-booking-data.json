@@ -1,0 +1,114 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "New patient booking",
+  "objective": "Diary_ New patient booking",
+  "priority": "Medium",
+  "type": "Functional",
+  "preconditions": [
+    "User is logged in on the diary screen."
+  ],
+  "postconditions": [
+    "A booking should be made if required information was filled in and saved.",
+    "If the user closes the screen or not all required fields are filled in, NO booking should be made."
+  ],
+  "testData": [
+    {
+      "description": "Valid booking with all required fields",
+      "patientFirstName": "John",
+      "patientLastName": "Doe",
+      "dob": "1990-01-01",
+      "contactNumber": "1234567890",
+      "email": "john.doe@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "09:00",
+      "diary": "General Practice",
+      "notes": "First time booking",
+      "expectedResult": "Booking is reflected on the selected diary and time slot with Black 'A'-icon."
+    },
+    {
+      "description": "Booking with missing required field (contact number)",
+      "patientFirstName": "Jane",
+      "patientLastName": "Smith",
+      "dob": "1985-05-15",
+      "contactNumber": "",
+      "email": "jane.smith@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "10:00",
+      "diary": "General Practice",
+      "notes": "No contact number provided",
+      "expectedResult": "Booking is NOT made; user is prompted to fill required fields."
+    },
+    {
+      "description": "Booking with invalid email format",
+      "patientFirstName": "Alice",
+      "patientLastName": "Brown",
+      "dob": "1978-11-30",
+      "contactNumber": "9876543210",
+      "email": "alice.brown[at]mail.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "11:00",
+      "diary": "General Practice",
+      "notes": "Invalid email format",
+      "expectedResult": "Booking is NOT made; user is prompted to enter a valid email."
+    },
+    {
+      "description": "Booking at earliest allowed time slot",
+      "patientFirstName": "Bob",
+      "patientLastName": "Williams",
+      "dob": "2002-07-21",
+      "contactNumber": "5551234567",
+      "email": "bob.williams@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "08:00",
+      "diary": "General Practice",
+      "notes": "Earliest slot",
+      "expectedResult": "Booking is reflected on the selected diary and time slot with Black 'A'-icon."
+    },
+    {
+      "description": "Booking at latest allowed time slot",
+      "patientFirstName": "Carol",
+      "patientLastName": "Johnson",
+      "dob": "1995-03-10",
+      "contactNumber": "4449876543",
+      "email": "carol.johnson@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "17:00",
+      "diary": "General Practice",
+      "notes": "Latest slot",
+      "expectedResult": "Booking is reflected on the selected diary and time slot with Black 'A'-icon."
+    },
+    {
+      "description": "User closes booking screen before saving",
+      "patientFirstName": "David",
+      "patientLastName": "Lee",
+      "dob": "1980-08-08",
+      "contactNumber": "3332221111",
+      "email": "david.lee@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "12:00",
+      "diary": "General Practice",
+      "notes": "Screen closed before saving",
+      "expectedResult": "Booking is NOT made."
+    },
+    {
+      "description": "Booking with maximum length notes",
+      "patientFirstName": "Eve",
+      "patientLastName": "Martin",
+      "dob": "2000-12-31",
+      "contactNumber": "2223334444",
+      "email": "eve.martin@example.com",
+      "appointmentDate": "2025-12-01",
+      "appointmentTime": "13:00",
+      "diary": "General Practice",
+      "notes": "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expectedResult": "Booking is reflected on the selected diary and time slot with Black 'A'-icon."
+    }
+  ],
+  "locators": [
+    "locator_diary_screen",
+    "locator_new_booking_button",
+    "locator_patient_name_field",
+    "locator_appointment_time_slot",
+    "locator_save_button"
+  ]
+}
