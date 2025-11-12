@@ -1,0 +1,130 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "New patient booking",
+  "objective": "Diary_ New patient booking",
+  "priority": "Medium",
+  "type": "Functional",
+  "preconditions": [
+    "User should be logged in on the diary screen."
+  ],
+  "postconditions": [
+    "A booking should be made if required information was filled in and saved.",
+    "If the user closes the screen or not all required fields are filled in, NO booking should be made."
+  ],
+  "expectedResult": "New booking is reflected on the selected diary on the selected time slot. NOTE: The Black 'A'-icon on the booking",
+  "locators": [
+    { "name": "Diary Screen", "description": "Main diary view after login" },
+    { "name": "New Booking Button", "description": "Button to initiate new booking" },
+    { "name": "Patient Details Form", "description": "Form to enter patient information" },
+    { "name": "Save Button", "description": "Button to save booking" },
+    { "name": "Booking Slot", "description": "Time slot in diary to book appointment" }
+  ],
+  "testData": [
+    {
+      "scenario": "Valid new patient booking",
+      "input": {
+        "patientName": "John Doe",
+        "dob": "1985-05-15",
+        "gender": "Male",
+        "contactNumber": "1234567890",
+        "email": "john.doe@example.com",
+        "appointmentDate": "2025-12-01",
+        "appointmentTime": "10:30",
+        "reason": "General Checkup"
+      },
+      "expected": {
+        "bookingCreated": true,
+        "icon": "A",
+        "slotStatus": "Booked"
+      }
+    },
+    {
+      "scenario": "Missing required field (patient name)",
+      "input": {
+        "patientName": "",
+        "dob": "1990-01-01",
+        "gender": "Female",
+        "contactNumber": "9876543210",
+        "email": "jane.smith@example.com",
+        "appointmentDate": "2025-12-01",
+        "appointmentTime": "11:00",
+        "reason": "Consultation"
+      },
+      "expected": {
+        "bookingCreated": false,
+        "error": "Patient name is required"
+      }
+    },
+    {
+      "scenario": "Edge case: Booking at earliest slot",
+      "input": {
+        "patientName": "Alice Early",
+        "dob": "2000-01-01",
+        "gender": "Female",
+        "contactNumber": "1112223333",
+        "email": "alice.early@example.com",
+        "appointmentDate": "2025-12-01",
+        "appointmentTime": "08:00",
+        "reason": "Earliest slot test"
+      },
+      "expected": {
+        "bookingCreated": true,
+        "icon": "A",
+        "slotStatus": "Booked"
+      }
+    },
+    {
+      "scenario": "Edge case: Booking at latest slot",
+      "input": {
+        "patientName": "Bob Late",
+        "dob": "1975-12-31",
+        "gender": "Male",
+        "contactNumber": "4445556666",
+        "email": "bob.late@example.com",
+        "appointmentDate": "2025-12-01",
+        "appointmentTime": "18:00",
+        "reason": "Latest slot test"
+      },
+      "expected": {
+        "bookingCreated": true,
+        "icon": "A",
+        "slotStatus": "Booked"
+      }
+    },
+    {
+      "scenario": "Invalid email format",
+      "input": {
+        "patientName": "Chris Invalid",
+        "dob": "1995-07-20",
+        "gender": "Other",
+        "contactNumber": "7778889999",
+        "email": "invalid-email",
+        "appointmentDate": "2025-12-01",
+        "appointmentTime": "09:30",
+        "reason": "Email validation"
+      },
+      "expected": {
+        "bookingCreated": false,
+        "error": "Invalid email format"
+      }
+    },
+    {
+      "scenario": "User closes booking screen before saving",
+      "input": {
+        "patientName": "Dana Cancel",
+        "dob": "1988-03-10",
+        "gender": "Female",
+        "contactNumber": "2223334444",
+        "email": "dana.cancel@example.com",
+        "appointmentDate": "2025-12-01",
+        "appointmentTime": "12:00",
+        "reason": "Cancellation test"
+      },
+      "userAction": "closeWithoutSaving",
+      "expected": {
+        "bookingCreated": false,
+        "error": "Booking not saved"
+      }
+    }
+  ]
+}
