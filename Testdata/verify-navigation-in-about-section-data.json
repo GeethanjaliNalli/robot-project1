@@ -1,0 +1,77 @@
+{
+  "testCaseId": "TC00002",
+  "testCaseName": "Verify Navigation in the About section",
+  "objective": "Login and navigate to each tab in 'About' Module",
+  "priority": "Medium",
+  "preconditions": [
+    "A valid user name and password combination"
+  ],
+  "tabs": [
+    {
+      "tabName": "Overview",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "Company Info",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "Team",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "Contact",
+      "expectedNavigation": true
+    },
+    {
+      "tabName": "Legal",
+      "expectedNavigation": true
+    }
+  ],
+  "credentials": [
+    {
+      "username": "validUser1",
+      "password": "ValidPass123"
+    },
+    {
+      "username": "validUser2",
+      "password": "AnotherValidPass456"
+    }
+  ],
+  "edgeCases": {
+    "aboutSectionAlreadyOpen": {
+      "description": "About section is already open before navigation begins.",
+      "expectedBehavior": "Tabs should still be navigable and About section can be closed."
+    },
+    "rapidTabSwitching": {
+      "description": "User switches tabs rapidly.",
+      "expectedBehavior": "Application should not crash and all tabs should load correctly."
+    },
+    "closeAboutSection": {
+      "description": "User closes the About section after navigation.",
+      "expectedBehavior": "About section closes successfully and user returns to previous state."
+    }
+  },
+  "locators": [
+    {
+      "element": "About Button",
+      "locator": "//button[@id='about-btn']"
+    },
+    {
+      "element": "Overview Tab",
+      "locator": "//div[@id='about-tabs']//button[text()='Overview']"
+    },
+    {
+      "element": "Company Info Tab",
+      "locator": "//div[@id='about-tabs']//button[text()='Company Info']"
+    },
+    {
+      "element": "Team Tab",
+      "locator": "//div[@id='about-tabs']//button[text()='Team']"
+    },
+    {
+      "element": "Close About",
+      "locator": "//button[@id='close-about']"
+    }
+  ]
+}
