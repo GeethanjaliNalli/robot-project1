@@ -1,0 +1,119 @@
+{
+  "testCases": [
+    {
+      "id": "TC_01",
+      "description": "Valid new patient booking with all required fields filled",
+      "diaryName": "General Practice",
+      "date": "2025-12-01",
+      "timeSlot": "09:00-09:30",
+      "patient": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "dob": "1990-01-01",
+        "gender": "Male",
+        "phone": "1234567890",
+        "email": "john.doe@example.com"
+      },
+      "bookingType": "New Patient",
+      "notes": "N/A",
+      "expectedResult": "Booking is created and visible with black 'A' icon."
+    },
+    {
+      "id": "TC_02",
+      "description": "Booking with missing required field (phone)",
+      "diaryName": "General Practice",
+      "date": "2025-12-01",
+      "timeSlot": "09:30-10:00",
+      "patient": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "dob": "1985-05-15",
+        "gender": "Female",
+        "phone": "",
+        "email": "jane.smith@example.com"
+      },
+      "bookingType": "New Patient",
+      "notes": "N/A",
+      "expectedResult": "Booking is NOT created; error message for missing phone."
+    },
+    {
+      "id": "TC_03",
+      "description": "Booking with invalid email format",
+      "diaryName": "General Practice",
+      "date": "2025-12-01",
+      "timeSlot": "10:00-10:30",
+      "patient": {
+        "firstName": "Alice",
+        "lastName": "Brown",
+        "dob": "1970-07-20",
+        "gender": "Female",
+        "phone": "9876543210",
+        "email": "alice.brown@invalid"
+      },
+      "bookingType": "New Patient",
+      "notes": "N/A",
+      "expectedResult": "Booking is NOT created; error message for invalid email."
+    },
+    {
+      "id": "TC_04",
+      "description": "Booking with boundary value for earliest possible time slot",
+      "diaryName": "General Practice",
+      "date": "2025-12-01",
+      "timeSlot": "08:00-08:30",
+      "patient": {
+        "firstName": "Bob",
+        "lastName": "Williams",
+        "dob": "2000-12-31",
+        "gender": "Male",
+        "phone": "5551234567",
+        "email": "bob.williams@example.com"
+      },
+      "bookingType": "New Patient",
+      "notes": "First slot of the day",
+      "expectedResult": "Booking is created and visible with black 'A' icon."
+    },
+    {
+      "id": "TC_05",
+      "description": "Booking with boundary value for latest possible time slot",
+      "diaryName": "General Practice",
+      "date": "2025-12-01",
+      "timeSlot": "17:30-18:00",
+      "patient": {
+        "firstName": "Carol",
+        "lastName": "Johnson",
+        "dob": "1995-03-10",
+        "gender": "Female",
+        "phone": "4445556666",
+        "email": "carol.johnson@example.com"
+      },
+      "bookingType": "New Patient",
+      "notes": "Last slot of the day",
+      "expectedResult": "Booking is created and visible with black 'A' icon."
+    },
+    {
+      "id": "TC_06",
+      "description": "User closes booking screen before saving",
+      "diaryName": "General Practice",
+      "date": "2025-12-01",
+      "timeSlot": "11:00-11:30",
+      "patient": {
+        "firstName": "David",
+        "lastName": "Lee",
+        "dob": "1988-11-11",
+        "gender": "Male",
+        "phone": "3332221111",
+        "email": "david.lee@example.com"
+      },
+      "bookingType": "New Patient",
+      "notes": "User cancels before saving",
+      "expectedResult": "Booking is NOT created."
+    }
+  ],
+  "locators": [
+    "diary_screen",
+    "new_booking_button",
+    "patient_details_form",
+    "save_booking_button",
+    "booking_confirmation_icon"
+  ]
+}
