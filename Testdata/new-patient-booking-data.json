@@ -1,0 +1,96 @@
+{
+  "test_case_id": "TC00002_Diary_NPB",
+  "test_case_name": "New patient booking",
+  "description": "Diary_ New patient booking",
+  "priority": "Medium",
+  "preconditions": [
+    "User is logged in on the diary screen."
+  ],
+  "test_data": [
+    {
+      "scenario": "Valid new patient booking",
+      "patient_first_name": "John",
+      "patient_last_name": "Doe",
+      "dob": "1985-05-15",
+      "contact_number": "+441234567890",
+      "email": "johndoe@example.com",
+      "appointment_date": "2025-11-13",
+      "appointment_time": "09:00",
+      "diary": "Dr. Smith",
+      "reason": "Initial Consultation",
+      "expected_result": "Booking is reflected on the selected diary at the selected time slot with Black 'A'-icon."
+    },
+    {
+      "scenario": "Booking with missing required fields (no last name)",
+      "patient_first_name": "Jane",
+      "patient_last_name": "",
+      "dob": "1990-12-01",
+      "contact_number": "+441234567891",
+      "email": "janedoe@example.com",
+      "appointment_date": "2025-11-13",
+      "appointment_time": "10:00",
+      "diary": "Dr. Smith",
+      "reason": "Follow-up",
+      "expected_result": "No booking is made. Error is shown for missing required fields."
+    },
+    {
+      "scenario": "Booking with invalid date of birth (future date)",
+      "patient_first_name": "Alice",
+      "patient_last_name": "Brown",
+      "dob": "2026-01-01",
+      "contact_number": "+441234567892",
+      "email": "alicebrown@example.com",
+      "appointment_date": "2025-11-13",
+      "appointment_time": "11:00",
+      "diary": "Dr. Smith",
+      "reason": "Consultation",
+      "expected_result": "No booking is made. Error is shown for invalid date of birth."
+    },
+    {
+      "scenario": "Booking with boundary time slot (first slot of the day)",
+      "patient_first_name": "Bob",
+      "patient_last_name": "White",
+      "dob": "1975-03-20",
+      "contact_number": "+441234567893",
+      "email": "bobwhite@example.com",
+      "appointment_date": "2025-11-13",
+      "appointment_time": "08:00",
+      "diary": "Dr. Smith",
+      "reason": "Annual Checkup",
+      "expected_result": "Booking is reflected on the selected diary at the first available slot with Black 'A'-icon."
+    },
+    {
+      "scenario": "Booking with maximum length names",
+      "patient_first_name": "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "patient_last_name": "Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "dob": "1980-07-07",
+      "contact_number": "+441234567894",
+      "email": "maxnamelength@example.com",
+      "appointment_date": "2025-11-13",
+      "appointment_time": "12:00",
+      "diary": "Dr. Smith",
+      "reason": "Long name test",
+      "expected_result": "Booking is reflected on the selected diary at the selected time slot with Black 'A'-icon."
+    },
+    {
+      "scenario": "Booking cancelled before saving",
+      "patient_first_name": "Charlie",
+      "patient_last_name": "Green",
+      "dob": "1995-09-09",
+      "contact_number": "+441234567895",
+      "email": "charliegreen@example.com",
+      "appointment_date": "2025-11-13",
+      "appointment_time": "13:00",
+      "diary": "Dr. Smith",
+      "reason": "Consultation",
+      "expected_result": "No booking is made if the user closes the booking screen before saving."
+    }
+  ],
+  "locators": [
+    "diary_screen_locator",
+    "new_booking_button_locator",
+    "patient_details_form_locator",
+    "save_booking_button_locator",
+    "booking_confirmation_icon_locator"
+  ]
+}
