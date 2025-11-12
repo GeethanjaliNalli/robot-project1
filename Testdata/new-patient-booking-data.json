@@ -1,0 +1,134 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "New patient booking",
+  "objective": "Diary_ New patient booking",
+  "preconditions": "User should be logged in on the diary screen.",
+  "priority": "Medium",
+  "testData": [
+    {
+      "scenario": "Valid booking - all required fields filled",
+      "input": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "dateOfBirth": "1990-01-01",
+        "gender": "Male",
+        "contactNumber": "1234567890",
+        "appointmentDate": "2025-11-13",
+        "appointmentTime": "10:00",
+        "reason": "General Checkup"
+      },
+      "expectedResult": "Booking is created successfully."
+    },
+    {
+      "scenario": "Missing required field - first name",
+      "input": {
+        "firstName": "",
+        "lastName": "Smith",
+        "dateOfBirth": "1985-05-20",
+        "gender": "Female",
+        "contactNumber": "9876543210",
+        "appointmentDate": "2025-11-14",
+        "appointmentTime": "11:30",
+        "reason": "Consultation"
+      },
+      "expectedResult": "No booking is created. Error: 'First Name is required.'"
+    },
+    {
+      "scenario": "User closes booking screen before saving",
+      "input": {
+        "firstName": "Alice",
+        "lastName": "Brown",
+        "dateOfBirth": "2000-12-31",
+        "gender": "Other",
+        "contactNumber": "5555555555",
+        "appointmentDate": "2025-11-15",
+        "appointmentTime": "09:00",
+        "reason": "Vaccination"
+      },
+      "action": "closeWithoutSaving",
+      "expectedResult": "No booking is created."
+    },
+    {
+      "scenario": "Boundary value - earliest allowed appointment date",
+      "input": {
+        "firstName": "Bob",
+        "lastName": "Lee",
+        "dateOfBirth": "1970-07-07",
+        "gender": "Male",
+        "contactNumber": "1112223333",
+        "appointmentDate": "2025-01-01",
+        "appointmentTime": "08:00",
+        "reason": "Routine"
+      },
+      "expectedResult": "Booking is created successfully."
+    },
+    {
+      "scenario": "Boundary value - latest allowed appointment date",
+      "input": {
+        "firstName": "Carol",
+        "lastName": "Nguyen",
+        "dateOfBirth": "1965-03-15",
+        "gender": "Female",
+        "contactNumber": "4443332222",
+        "appointmentDate": "2025-12-31",
+        "appointmentTime": "17:00",
+        "reason": "Follow-up"
+      },
+      "expectedResult": "Booking is created successfully."
+    },
+    {
+      "scenario": "Invalid contact number format",
+      "input": {
+        "firstName": "Eve",
+        "lastName": "Wang",
+        "dateOfBirth": "1995-08-08",
+        "gender": "Female",
+        "contactNumber": "abcde12345",
+        "appointmentDate": "2025-11-16",
+        "appointmentTime": "13:00",
+        "reason": "Consultation"
+      },
+      "expectedResult": "No booking is created. Error: 'Invalid contact number.'"
+    },
+    {
+      "scenario": "Missing required field - appointment date",
+      "input": {
+        "firstName": "David",
+        "lastName": "Kim",
+        "dateOfBirth": "1988-09-09",
+        "gender": "Male",
+        "contactNumber": "2223334444",
+        "appointmentDate": "",
+        "appointmentTime": "15:00",
+        "reason": "Checkup"
+      },
+      "expectedResult": "No booking is created. Error: 'Appointment Date is required.'"
+    },
+    {
+      "scenario": "Edge case - very long reason text",
+      "input": {
+        "firstName": "Fay",
+        "lastName": "Singh",
+        "dateOfBirth": "1992-11-11",
+        "gender": "Other",
+        "contactNumber": "9998887777",
+        "appointmentDate": "2025-11-17",
+        "appointmentTime": "16:30",
+        "reason": "A" * 256
+      },
+      "expectedResult": "No booking is created. Error: 'Reason exceeds maximum length.'"
+    }
+  ],
+  "locators": [
+    "firstNameField",
+    "lastNameField",
+    "dateOfBirthField",
+    "genderDropdown",
+    "contactNumberField",
+    "appointmentDateField",
+    "appointmentTimeField",
+    "reasonField",
+    "saveButton",
+    "closeButton"
+  ]
+}
