@@ -1,0 +1,66 @@
+{
+  "testCaseId": "TC00002",
+  "testCaseName": "Verify Navigation in the About section",
+  "objective": "Login and navigate to each tab in 'About' Module",
+  "priority": "Medium",
+  "type": "Functional",
+  "preconditions": [
+    "A valid user name and password combination"
+  ],
+  "tabsToNavigate": [
+    "Overview",
+    "Company Info",
+    "Team",
+    "Careers",
+    "Contact"
+  ],
+  "locators": [
+    {
+      "name": "Username Field",
+      "type": "id",
+      "value": "username-input"
+    },
+    {
+      "name": "Password Field",
+      "type": "id",
+      "value": "password-input"
+    },
+    {
+      "name": "Login Button",
+      "type": "id",
+      "value": "login-btn"
+    },
+    {
+      "name": "About Menu",
+      "type": "xpath",
+      "value": "//nav//a[text()='About']"
+    },
+    {
+      "name": "Tab Navigation",
+      "type": "css",
+      "value": ".about-tabs .tab-item"
+    }
+  ],
+  "testUsers": [
+    {
+      "username": "testuser1",
+      "password": "Password123!"
+    },
+    {
+      "username": "about_section_user",
+      "password": "About@2024"
+    }
+  ],
+  "edgeCases": [
+    {
+      "description": "Navigate to About section immediately after login without waiting for dashboard load"
+    },
+    {
+      "description": "Attempt navigation with session timeout (simulate by logging out and navigating)"
+    },
+    {
+      "description": "Navigate to each tab rapidly in succession"
+    }
+  ],
+  "expectedResult": "User should be able to login and navigate through each tab in the About section as specified in the expected results."
+}
