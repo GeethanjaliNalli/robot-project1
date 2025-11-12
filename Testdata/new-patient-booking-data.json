@@ -1,0 +1,137 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "New patient booking",
+  "objective": "Diary_ New patient booking",
+  "priority": "Medium",
+  "type": "Functional",
+  "preconditions": [
+    "User should be logged in on the diary screen."
+  ],
+  "postconditions": [
+    "A booking should be made if required information was filled in and saved.",
+    "If the user closes the screen or not all required fields are filled in, NO booking should be made."
+  ],
+  "testDataSets": [
+    {
+      "description": "Valid booking with all required fields",
+      "input": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "dateOfBirth": "1990-01-01",
+        "gender": "Male",
+        "contactNumber": "1234567890",
+        "appointmentDate": "2025-12-01",
+        "appointmentTime": "10:00",
+        "reason": "General Checkup"
+      },
+      "expectedResult": "Booking is successfully created."
+    },
+    {
+      "description": "Missing required field (firstName)",
+      "input": {
+        "firstName": "",
+        "lastName": "Smith",
+        "dateOfBirth": "1985-05-12",
+        "gender": "Female",
+        "contactNumber": "9876543210",
+        "appointmentDate": "2025-12-02",
+        "appointmentTime": "11:00",
+        "reason": "Consultation"
+      },
+      "expectedResult": "Booking is NOT created. Error shown for missing first name."
+    },
+    {
+      "description": "User closes booking screen before saving",
+      "input": {
+        "firstName": "Alice",
+        "lastName": "Brown",
+        "dateOfBirth": "2000-07-15",
+        "gender": "Female",
+        "contactNumber": "5551234567",
+        "appointmentDate": "2025-12-03",
+        "appointmentTime": "09:30",
+        "reason": "Vaccination",
+        "action": "closeWithoutSaving"
+      },
+      "expectedResult": "Booking is NOT created."
+    },
+    {
+      "description": "Boundary value: appointment time at opening hour",
+      "input": {
+        "firstName": "Bob",
+        "lastName": "Miller",
+        "dateOfBirth": "1975-03-20",
+        "gender": "Male",
+        "contactNumber": "4445556666",
+        "appointmentDate": "2025-12-04",
+        "appointmentTime": "08:00",
+        "reason": "Blood Test"
+      },
+      "expectedResult": "Booking is successfully created."
+    },
+    {
+      "description": "Boundary value: appointment time at closing hour",
+      "input": {
+        "firstName": "Carol",
+        "lastName": "White",
+        "dateOfBirth": "1960-11-30",
+        "gender": "Female",
+        "contactNumber": "3332221111",
+        "appointmentDate": "2025-12-05",
+        "appointmentTime": "17:00",
+        "reason": "Follow-up"
+      },
+      "expectedResult": "Booking is successfully created."
+    },
+    {
+      "description": "Invalid date of birth (future date)",
+      "input": {
+        "firstName": "David",
+        "lastName": "Green",
+        "dateOfBirth": "2030-01-01",
+        "gender": "Male",
+        "contactNumber": "2223334444",
+        "appointmentDate": "2025-12-06",
+        "appointmentTime": "13:00",
+        "reason": "Consultation"
+      },
+      "expectedResult": "Booking is NOT created. Error shown for invalid date of birth."
+    },
+    {
+      "description": "Missing all required fields",
+      "input": {
+        "firstName": "",
+        "lastName": "",
+        "dateOfBirth": "",
+        "gender": "",
+        "contactNumber": "",
+        "appointmentDate": "",
+        "appointmentTime": "",
+        "reason": ""
+      },
+      "expectedResult": "Booking is NOT created. Error shown for missing required fields."
+    }
+  ],
+  "locators": [
+    {
+      "element": "firstNameField",
+      "locator": "id=first_name_input"
+    },
+    {
+      "element": "lastNameField",
+      "locator": "id=last_name_input"
+    },
+    {
+      "element": "dateOfBirthField",
+      "locator": "id=dob_input"
+    },
+    {
+      "element": "appointmentDateField",
+      "locator": "id=appointment_date_input"
+    },
+    {
+      "element": "saveButton",
+      "locator": "id=save_booking_btn"
+    }
+  ]
+}
