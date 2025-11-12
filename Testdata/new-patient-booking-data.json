@@ -1,0 +1,115 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "New patient booking",
+  "description": "Diary_ New patient booking",
+  "priority": "Medium",
+  "preconditions": "User should be logged in on the diary screen.",
+  "postconditions": "A booking should be made if required information was filled in and saved. If the user closes the screen or not all required fields are filled in, NO booking should be made.",
+  "testDataSets": [
+    {
+      "scenario": "All required fields filled, booking saved",
+      "input": {
+        "patient_first_name": "John",
+        "patient_last_name": "Doe",
+        "date_of_birth": "1990-01-01",
+        "contact_number": "1234567890",
+        "appointment_date": "2025-12-01",
+        "appointment_time": "10:00",
+        "reason_for_visit": "General Consultation"
+      },
+      "expected_result": "Booking created successfully"
+    },
+    {
+      "scenario": "Missing required field (first name)",
+      "input": {
+        "patient_first_name": "",
+        "patient_last_name": "Doe",
+        "date_of_birth": "1990-01-01",
+        "contact_number": "1234567890",
+        "appointment_date": "2025-12-01",
+        "appointment_time": "10:00",
+        "reason_for_visit": "General Consultation"
+      },
+      "expected_result": "Booking not created; error for missing first name"
+    },
+    {
+      "scenario": "User closes booking screen before saving",
+      "input": {
+        "patient_first_name": "Jane",
+        "patient_last_name": "Smith",
+        "date_of_birth": "1985-05-15",
+        "contact_number": "0987654321",
+        "appointment_date": "2025-12-02",
+        "appointment_time": "11:30",
+        "reason_for_visit": "Dental Checkup"
+      },
+      "action": "close_without_saving",
+      "expected_result": "Booking not created"
+    },
+    {
+      "scenario": "Boundary value: appointment date in the past",
+      "input": {
+        "patient_first_name": "Alice",
+        "patient_last_name": "Brown",
+        "date_of_birth": "2000-12-31",
+        "contact_number": "5555555555",
+        "appointment_date": "2020-01-01",
+        "appointment_time": "09:00",
+        "reason_for_visit": "Eye Checkup"
+      },
+      "expected_result": "Booking not created; error for invalid appointment date"
+    },
+    {
+      "scenario": "Edge case: minimum length for first and last name",
+      "input": {
+        "patient_first_name": "A",
+        "patient_last_name": "B",
+        "date_of_birth": "2010-10-10",
+        "contact_number": "1111111111",
+        "appointment_date": "2025-12-03",
+        "appointment_time": "14:00",
+        "reason_for_visit": "Vaccination"
+      },
+      "expected_result": "Booking created successfully"
+    },
+    {
+      "scenario": "Edge case: maximum length for first and last name",
+      "input": {
+        "patient_first_name": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "patient_last_name": "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBA",
+        "date_of_birth": "1995-07-07",
+        "contact_number": "2222222222",
+        "appointment_date": "2025-12-04",
+        "appointment_time": "15:30",
+        "reason_for_visit": "Annual Physical"
+      },
+      "expected_result": "Booking created successfully"
+    },
+    {
+      "scenario": "Invalid contact number (less than 10 digits)",
+      "input": {
+        "patient_first_name": "Chris",
+        "patient_last_name": "Evans",
+        "date_of_birth": "1988-08-08",
+        "contact_number": "12345",
+        "appointment_date": "2025-12-05",
+        "appointment_time": "16:00",
+        "reason_for_visit": "Consultation"
+      },
+      "expected_result": "Booking not created; error for invalid contact number"
+    },
+    {
+      "scenario": "All fields valid, special characters in reason for visit",
+      "input": {
+        "patient_first_name": "Emily",
+        "patient_last_name": "Clark",
+        "date_of_birth": "1975-03-03",
+        "contact_number": "3333333333",
+        "appointment_date": "2025-12-06",
+        "appointment_time": "17:00",
+        "reason_for_visit": "Follow-up: Surgery @ Clinic #2"
+      },
+      "expected_result": "Booking created successfully"
+    }
+  ]
+}
