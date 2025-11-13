@@ -1,0 +1,84 @@
+{
+  "test_cases": [
+    {
+      "id": "TC-N002",
+      "name": "Negative Scenario - Close the Add/Edit booking screen",
+      "objective": "Verify that closing the Add/Edit booking screen does not create a booking.",
+      "preconditions": [
+        "User is logged in and on the diary screen."
+      ],
+      "priority": "Medium",
+      "type": "Negative",
+      "steps_summary": "Attempt to create a booking but close the Add/Edit booking screen before saving.",
+      "test_steps": [
+        {
+          "step": 1,
+          "description": "Open Add/Edit booking screen from diary."
+        },
+        {
+          "step": 2,
+          "description": "Fill in some or all required booking fields (simulate partial and empty input)."
+        },
+        {
+          "step": 3,
+          "description": "Close the Add/Edit booking screen using the close button or 'X' without saving."
+        },
+        {
+          "step": 4,
+          "description": "Verify that no booking is created in the diary."
+        }
+      ],
+      "test_data_variants": [
+        {
+          "variant_id": "TC-N002-01",
+          "description": "Close screen without entering any data.",
+          "input_fields": {
+            "Name": "",
+            "Date": "",
+            "Time": "",
+            "Service": "",
+            "Notes": ""
+          },
+          "action": "Close screen",
+          "expected_result": "NO booking to be made"
+        },
+        {
+          "variant_id": "TC-N002-02",
+          "description": "Close screen after entering only partial required data (e.g., Name only).",
+          "input_fields": {
+            "Name": "Test User",
+            "Date": "",
+            "Time": "",
+            "Service": "",
+            "Notes": ""
+          },
+          "action": "Close screen",
+          "expected_result": "NO booking to be made"
+        },
+        {
+          "variant_id": "TC-N002-03",
+          "description": "Close screen after entering all required data but without saving.",
+          "input_fields": {
+            "Name": "Test User",
+            "Date": "2024-07-01",
+            "Time": "10:00",
+            "Service": "Consultation",
+            "Notes": "Test note"
+          },
+          "action": "Close screen",
+          "expected_result": "NO booking to be made"
+        }
+      ],
+      "locators": [
+        "add_edit_booking_button",
+        "booking_name_field",
+        "booking_date_field",
+        "booking_time_field",
+        "close_booking_screen_button"
+      ],
+      "post_conditions": [
+        "No booking should be present in the diary unless all required fields are filled and booking is saved."
+      ]
+    }
+  ]
+}
