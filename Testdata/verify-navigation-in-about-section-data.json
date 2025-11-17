@@ -1,0 +1,83 @@
+{
+  "test_cases": [
+    {
+      "id": "TC00002",
+      "description": "Verify Navigation in the About section",
+      "preconditions": "A valid user name and password combination",
+      "input": {
+        "username": "validUser01",
+        "password": "ValidPassword@123",
+        "about_tabs": [
+          "Overview",
+          "Team",
+          "Contact",
+          "Legal",
+          "Version"
+        ]
+      },
+      "locators": [
+        {
+          "name": "about_menu_button",
+          "type": "id",
+          "value": "about-menu-btn"
+        },
+        {
+          "name": "overview_tab",
+          "type": "xpath",
+          "value": "//div[@id='about-tabs']//button[text()='Overview']"
+        },
+        {
+          "name": "team_tab",
+          "type": "xpath",
+          "value": "//div[@id='about-tabs']//button[text()='Team']"
+        },
+        {
+          "name": "contact_tab",
+          "type": "xpath",
+          "value": "//div[@id='about-tabs']//button[text()='Contact']"
+        },
+        {
+          "name": "close_about_section",
+          "type": "css",
+          "value": ".about-section .close-btn"
+        }
+      ],
+      "expected_result": "About Section will be closed"
+    },
+    {
+      "id": "TC00002-EdgeCase-InvalidLogin",
+      "description": "Verify About section navigation with invalid login credentials",
+      "preconditions": "Invalid user name or password",
+      "input": {
+        "username": "invalidUser",
+        "password": "WrongPassword",
+        "about_tabs": []
+      },
+      "locators": [],
+      "expected_result": "Login should fail; About section should not be accessible"
+    },
+    {
+      "id": "TC00002-EdgeCase-EmptyTabs",
+      "description": "Verify About section navigation when no tabs are present (boundary)",
+      "preconditions": "Valid login, About section has no tabs configured",
+      "input": {
+        "username": "validUser01",
+        "password": "ValidPassword@123",
+        "about_tabs": []
+      },
+      "locators": [
+        {
+          "name": "about_menu_button",
+          "type": "id",
+          "value": "about-menu-btn"
+        },
+        {
+          "name": "close_about_section",
+          "type": "css",
+          "value": ".about-section .close-btn"
+        }
+      ],
+      "expected_result": "About Section opens but no tabs are displayed; Section can be closed"
+    }
+  ]
+}

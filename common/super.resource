@@ -1,2 +1,3 @@
 *** Settings ***
-Resource    ../objectrepository/diary_page.resource
+Resource    ../objectrepository/about_page.resource
+# (Other existing imports remain unchanged)
