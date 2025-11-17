@@ -1,0 +1,80 @@
+{
+  "testCaseId": "TC00002",
+  "testCaseName": "Verify Navigation in the About section",
+  "objective": "Login and navigate to each tab in 'About' Module",
+  "preconditions": [
+    "A valid user name and password combination"
+  ],
+  "priority": "Medium",
+  "aboutTabs": [
+    {
+      "tabName": "App Info",
+      "expected": "About section opens with App Info tab selected"
+    },
+    {
+      "tabName": "Version",
+      "expected": "Version tab displays application version information"
+    },
+    {
+      "tabName": "License",
+      "expected": "License tab displays open source and license details"
+    },
+    {
+      "tabName": "Support",
+      "expected": "Support tab displays contact and support information"
+    },
+    {
+      "tabName": "Credits",
+      "expected": "Credits tab displays contributors and acknowledgements"
+    }
+  ],
+  "loginCredentials": [
+    {
+      "username": "validUser",
+      "password": "validPassword"
+    },
+    {
+      "username": "validUserWithSpecialChars",
+      "password": "validPassword!@#"
+    },
+    {
+      "username": "user_with_long_name_1234567890",
+      "password": "longpassword1234567890"
+    }
+  ],
+  "edgeCases": [
+    {
+      "description": "Navigate to About section with minimum permissions",
+      "username": "about_min_user",
+      "password": "minPermsPass"
+    },
+    {
+      "description": "Navigate to About section with maximum permissions",
+      "username": "about_max_user",
+      "password": "maxPermsPass"
+    }
+  ],
+  "locators": [
+    {
+      "element": "About Menu",
+      "locator": "//nav//a[@id='about-menu']"
+    },
+    {
+      "element": "App Info Tab",
+      "locator": "//div[@role='tab'][text()='App Info']"
+    },
+    {
+      "element": "Version Tab",
+      "locator": "//div[@role='tab'][text()='Version']"
+    },
+    {
+      "element": "License Tab",
+      "locator": "//div[@role='tab'][text()='License']"
+    },
+    {
+      "element": "Support Tab",
+      "locator": "//div[@role='tab'][text()='Support']"
+    }
+  ],
+  "expectedResult": "About section will be open with the first tab - App info"
+}
