@@ -1,0 +1,6 @@
+test_case_name	input.time	input.duration	input.reason	input.debtor.surname	input.debtor.firstname	input.debtor.initials	select.debtor.title	input.debtor.idnumber	input.debtor.gender	input.debtor.cell	input.patient.surname	input.patient.firstname	input.patient.initials	select.patient.title	input.patient.idnumber	input.patient.gender	input.patient.cell	debtor_name	cell_no	timeslot
+TC_01_Valid_New_Patient_Booking	09:30	30	General Consultation	Smith	Alex	AC	MR	9001015800081	Male	0821234567	Smith	Alex	AC	MR	9001015800081	Male	0821234567	MR Smith, AC, Alex	0821234567	09:30
+TC_02_Missing_Debtor_Surname	09:30	30	General Consultation		Alex	AC	MR	9001015800081	Male	0821234567	Smith	Alex	AC	MR	9001015800081	Male	0821234567	MR , AC, Alex	0821234567	09:30
+TC_03_Invalid_ID_Number	09:30	30	General Consultation	Smith	Alex	AC	MR	12345	Male	0821234567	Smith	Alex	AC	MR	12345	Male	0821234567	MR Smith, AC, Alex	0821234567	09:30
+TC_04_Blank_Reason	09:30	30		Smith	Alex	AC	MR	9001015800081	Male	0821234567	Smith	Alex	AC	MR	9001015800081	Male	0821234567	MR Smith, AC, Alex	0821234567	09:30
+TC_05_Invalid_Cell_Number	09:30	30	General Consultation	Smith	Alex	AC	MR	9001015800081	Male	123	Smith	Alex	AC	MR	9001015800081	Male	123	MR Smith, AC, Alex	123	09:30
