@@ -1,0 +1,127 @@
+{
+  "testCaseId": "TC00002_Diary_NPB",
+  "testCaseName": "New patient booking",
+  "module": null,
+  "submodule": null,
+  "objective": "Diary_ New patient booking",
+  "priority": "Medium",
+  "type": "Functional",
+  "preconditions": [
+    "User should be logged in on the diary screen."
+  ],
+  "testData": [
+    {
+      "description": "All required fields filled, booking saved (happy path)",
+      "input": {
+        "patient_first_name": "John",
+        "patient_last_name": "Doe",
+        "dob": "1985-01-15",
+        "gender": "Male",
+        "contact_number": "+1234567890",
+        "email": "john.doe@example.com",
+        "appointment_date": "2025-12-01",
+        "appointment_time": "09:30",
+        "reason_for_visit": "General Checkup"
+      },
+      "expected_result": "Booking created successfully"
+    },
+    {
+      "description": "Missing required field (first name)",
+      "input": {
+        "patient_first_name": "",
+        "patient_last_name": "Smith",
+        "dob": "1990-06-10",
+        "gender": "Female",
+        "contact_number": "+1987654321",
+        "email": "jane.smith@example.com",
+        "appointment_date": "2025-12-02",
+        "appointment_time": "10:00",
+        "reason_for_visit": "Consultation"
+      },
+      "expected_result": "Booking not created; error for missing required field"
+    },
+    {
+      "description": "Close booking screen before saving",
+      "input": {
+        "patient_first_name": "Alice",
+        "patient_last_name": "Brown",
+        "dob": "1978-03-22",
+        "gender": "Female",
+        "contact_number": "+1122334455",
+        "email": "alice.brown@example.com",
+        "appointment_date": "2025-12-03",
+        "appointment_time": "11:00",
+        "reason_for_visit": "Follow-up"
+      },
+      "action": "close_screen_before_save",
+      "expected_result": "Booking not created"
+    },
+    {
+      "description": "Boundary value: minimum age (newborn)",
+      "input": {
+        "patient_first_name": "Baby",
+        "patient_last_name": "Newborn",
+        "dob": "2025-11-21",
+        "gender": "Other",
+        "contact_number": "+1000000000",
+        "email": "baby.newborn@example.com",
+        "appointment_date": "2025-12-04",
+        "appointment_time": "08:00",
+        "reason_for_visit": "Initial Checkup"
+      },
+      "expected_result": "Booking created successfully"
+    },
+    {
+      "description": "Boundary value: maximum future appointment date",
+      "input": {
+        "patient_first_name": "Future",
+        "patient_last_name": "Patient",
+        "dob": "2000-01-01",
+        "gender": "Male",
+        "contact_number": "+1999999999",
+        "email": "future.patient@example.com",
+        "appointment_date": "2030-12-31",
+        "appointment_time": "16:30",
+        "reason_for_visit": "Annual Physical"
+      },
+      "expected_result": "Booking created successfully"
+    },
+    {
+      "description": "Invalid email format",
+      "input": {
+        "patient_first_name": "Invalid",
+        "patient_last_name": "Email",
+        "dob": "1995-05-05",
+        "gender": "Female",
+        "contact_number": "+1222333444",
+        "email": "invalid-email-format",
+        "appointment_date": "2025-12-05",
+        "appointment_time": "14:00",
+        "reason_for_visit": "Consultation"
+      },
+      "expected_result": "Booking not created; error for invalid email"
+    },
+    {
+      "description": "Edge case: very long names",
+      "input": {
+        "patient_first_name": "Averyveryveryveryveryveryveryveryveryverylongfirstname",
+        "patient_last_name": "Extremelylonglastnamewithmanycharacters",
+        "dob": "1980-12-12",
+        "gender": "Other",
+        "contact_number": "+1444555666",
+        "email": "avery.long@example.com",
+        "appointment_date": "2025-12-06",
+        "appointment_time": "15:45",
+        "reason_for_visit": "Specialist Referral"
+      },
+      "expected_result": "Booking created successfully"
+    }
+  ],
+  "locators": [
+    "patient_first_name_input",
+    "patient_last_name_input",
+    "dob_input",
+    "gender_dropdown",
+    "appointment_date_picker"
+  ]
+}
