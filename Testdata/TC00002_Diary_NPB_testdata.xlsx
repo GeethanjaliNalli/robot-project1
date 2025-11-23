@@ -1,0 +1,4 @@
+test_case_name	input.time	input.duration	input.reason	input.debtor.title	input.debtor.surname	input.debtor.firstname	input.debtor.initials	input.debtor.gender	input.debtor.idnumber	input.debtor.cellno	input.patient.title	input.patient.surname	input.patient.firstname	input.patient.initials	input.patient.gender	input.patient.dob	input.patient.idnumber	input.patient.cellno	expected_result
+TC_01_Valid_New_Patient_Booking	09:30	30	Consultation	MR	Smith	Alex	AS	Male	8001015009087	0821234567	MR	Smith	Alex	AS	Male	1980-01-01	8001015009087	0821234567	Booking should be made
+TC_02_Missing_Required_Field	09:30	30		MR	Smith	Alex	AS	Male	8001015009087	0821234567	MR	Smith	Alex	AS	Male	1980-01-01	8001015009087	0821234567	No booking should be made
+TC_03_Close_Screen_Without_Saving	09:30	30	Consultation	MR	Smith	Alex	AS	Male	8001015009087	0821234567	MR	Smith	Alex	AS	Male	1980-01-01	8001015009087	0821234567	No booking should be made
