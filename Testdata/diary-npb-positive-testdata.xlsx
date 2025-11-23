@@ -1,0 +1,23 @@
+[
+  {
+    "test_case_name": "TC00002_Diary_NPB_001_NewPatientBooking_Positive",
+    "input.time": "09:00",
+    "input.duration": "30",
+    "input.reason": "General Consultation",
+    "input.debtor.surname": "Smith",
+    "input.debtor.firstname": "Alex",
+    "input.debtor.initials": "AC",
+    "select.debtor.title": "MR",
+    "input.debtor.idnumber": "9001015800081",
+    "input.debtor.cell": "0821234567",
+    "select.debtor.gender": "Male",
+    "input.patient.surname": "Smith",
+    "input.patient.firstname": "Alex",
+    "input.patient.initials": "AC",
+    "select.patient.title": "MR",
+    "input.patient.idnumber": "9001015800081",
+    "input.patient.cell": "0821234567",
+    "select.patient.gender": "Male",
+    "input.patient.dob": "1990-01-01"
+  }
+]
