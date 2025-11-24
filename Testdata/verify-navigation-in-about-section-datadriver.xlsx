@@ -1,0 +1,34 @@
+[
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Valid Credentials",
+    "Username": "alex.smith",
+    "Password": "Password123!",
+    "Expected_Login_Status": "Success",
+    "Expected_Navigation_Status": "All tabs navigated",
+    "Expected_AboutSection_Closed": "True"
+  },
+  {
+    "test_case_name": "TC_02_Negative_Invalid_Password",
+    "Username": "alex.smith",
+    "Password": "WrongPass",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Status": "Not navigated",
+    "Expected_AboutSection_Closed": "False"
+  },
+  {
+    "test_case_name": "TC_02_Negative_Empty_Username",
+    "Username": "",
+    "Password": "Password123!",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Status": "Not navigated",
+    "Expected_AboutSection_Closed": "False"
+  },
+  {
+    "test_case_name": "TC_02_Negative_Empty_Password",
+    "Username": "alex.smith",
+    "Password": "",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Status": "Not navigated",
+    "Expected_AboutSection_Closed": "False"
+  }
+]
