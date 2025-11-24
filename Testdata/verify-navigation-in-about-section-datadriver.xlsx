@@ -1,0 +1,29 @@
+[
+  {
+    "test_case_name": "TC_About_Valid_Login_And_Navigation",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "Expected_Login_Status": "Success",
+    "Tabs_To_Navigate": "Company,Team,Careers,Contact,Legal",
+    "Expected_About_Navigation_Result": "All tabs navigated successfully",
+    "Expected_About_Section_Closed": "True"
+  },
+  {
+    "test_case_name": "TC_About_Invalid_Login",
+    "Username": "alex.smith",
+    "Password": "WrongPass",
+    "Expected_Login_Status": "Failure",
+    "Tabs_To_Navigate": "",
+    "Expected_About_Navigation_Result": "Login failed, navigation not attempted",
+    "Expected_About_Section_Closed": "False"
+  },
+  {
+    "test_case_name": "TC_About_Partial_Tab_Navigation",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "Expected_Login_Status": "Success",
+    "Tabs_To_Navigate": "Company,Team",
+    "Expected_About_Navigation_Result": "Partial tabs navigated",
+    "Expected_About_Section_Closed": "True"
+  }
+]
