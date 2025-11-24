@@ -1,0 +1,58 @@
+[
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Valid Credentials",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "Company",
+    "Expected_Navigation_Status": "Success"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Valid Credentials - Team Tab",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "Team",
+    "Expected_Navigation_Status": "Success"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Valid Credentials - Careers Tab",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "Careers",
+    "Expected_Navigation_Status": "Success"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Valid Credentials - Contact Tab",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "Contact",
+    "Expected_Navigation_Status": "Success"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Valid Credentials - Legal Tab",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "Legal",
+    "Expected_Navigation_Status": "Success"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Invalid Credentials",
+    "Username": "alex.smith",
+    "Password": "wrongpass",
+    "About_Tab": "Company",
+    "Expected_Navigation_Status": "Login Failed"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Empty Username",
+    "Username": "",
+    "Password": "Password123",
+    "About_Tab": "Company",
+    "Expected_Navigation_Status": "Login Failed"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation In About Section With Empty Password",
+    "Username": "alex.smith",
+    "Password": "",
+    "About_Tab": "Company",
+    "Expected_Navigation_Status": "Login Failed"
+  }
+]
