@@ -1,0 +1,36 @@
+[Excel file: Sheet name 'about_section_navigation', Columns: ${test_case_name}, Username, Password, Tab, Expected_Result]
+
+Row 1:
+${test_case_name}: TC_01 Verify Navigation to Company Info Tab
+Username: AutomationUser
+Password: SecurePass123
+Tab: Company Info
+Expected_Result: Tab loaded successfully
+
+Row 2:
+${test_case_name}: TC_02 Verify Navigation to Team Members Tab
+Username: AutomationUser
+Password: SecurePass123
+Tab: Team Members
+Expected_Result: Tab loaded successfully
+
+Row 3:
+${test_case_name}: TC_03 Verify Navigation to Licenses Tab
+Username: AutomationUser
+Password: SecurePass123
+Tab: Licenses
+Expected_Result: Tab loaded successfully
+
+Row 4:
+${test_case_name}: TC_04 Verify Navigation to Privacy Policy Tab
+Username: AutomationUser
+Password: SecurePass123
+Tab: Privacy Policy
+Expected_Result: Tab loaded successfully
+
+Row 5:
+${test_case_name}: TC_05 Verify Navigation to Terms & Conditions Tab
+Username: AutomationUser
+Password: SecurePass123
+Tab: Terms & Conditions
+Expected_Result: Tab loaded successfully
