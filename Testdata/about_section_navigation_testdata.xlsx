@@ -1,0 +1,23 @@
+[
+  {
+    "test_case_name": "TC_01 Verify Successful Navigation in About Section",
+    "Username": "AlexUser",
+    "Password": "SecurePass123",
+    "Expected_Login_Status": "Success",
+    "Expected_Navigation_Result": "All tabs navigated successfully"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation Fails With Invalid Password",
+    "Username": "AlexUser",
+    "Password": "WrongPass",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Result": "Login failed, navigation not possible"
+  },
+  {
+    "test_case_name": "TC_03 Verify Navigation Fails With Invalid Username",
+    "Username": "WrongUser",
+    "Password": "SecurePass123",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Result": "Login failed, navigation not possible"
+  }
+]
