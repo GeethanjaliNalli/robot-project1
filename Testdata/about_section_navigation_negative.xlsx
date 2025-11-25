@@ -1,0 +1,6 @@
+[Sheet:about_section_navigation]
+${test_case_name},Username,Password,Tab,Expected_Navigation_Status,Error_Message
+TC_01_About_Invalid_Login,WrongUser,WrongPass,Company Profile,Failure,Invalid username or password
+TC_02_About_Missing_Tab,AutomationUser,AutoPass123,NonExistentTab,Failure,Tab not found
+TC_03_About_Valid_Navigation,AutomationUser,AutoPass123,Team,Success,
+TC_04_About_Logout_During_Navigation,AutomationUser,AutoPass123,Careers,Failure,Session expired
