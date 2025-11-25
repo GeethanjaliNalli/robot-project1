@@ -1,0 +1,5 @@
+test_case_name,Date,Time,Duration,Reason,Notes,Debtor_Title,Debtor_Surname,Debtor_Firstname,Debtor_Initials,Debtor_IDNumber,Debtor_CellNo,Patient_Title,Patient_Surname,Patient_Firstname,Patient_Initials,Patient_Gender,Patient_DOB,Expected_Result
+TC00002_NPB_ValidBooking,2025-12-01,09:30,30,Consultation,First time booking,MR,Carey,Alex,AC,8501015009087,0823456789,MR,Carey,Alex,AC,Male,1985-01-01,Booking should be made
+TC00002_NPB_MissingDebtorName,2025-12-01,10:00,30,Consultation,First time booking,MR,,,AC,8501015009087,0823456789,MR,Carey,Alex,AC,Male,1985-01-01,No booking should be made
+TC00002_NPB_MissingRequiredFields,2025-12-01,11:00,,Consultation,First time booking,MR,Carey,Alex,AC,8501015009087,0823456789,MR,Carey,Alex,AC,Male,1985-01-01,No booking should be made
+TC00002_NPB_CloseWithoutSave,2025-12-01,12:00,30,Consultation,First time booking,MR,Carey,Alex,AC,8501015009087,0823456789,MR,Carey,Alex,AC,Male,1985-01-01,No booking should be made
