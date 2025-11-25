@@ -1,0 +1,23 @@
+[
+  {
+    "test_case_name": "TC_About_01 Verify Navigation in About Section with Valid Credentials",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "About_Tab": "Company Info",
+    "Expected_Result": "Navigation successful and About dialog closed"
+  },
+  {
+    "test_case_name": "TC_About_02 Verify Navigation in About Section with Missing Tab",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "About_Tab": "",
+    "Expected_Result": "Tab not found error displayed"
+  },
+  {
+    "test_case_name": "TC_About_03 Verify Navigation in About Section with Invalid Credentials",
+    "Username": "WrongUser",
+    "Password": "WrongPass",
+    "About_Tab": "Company Info",
+    "Expected_Result": "Login failed error displayed"
+  }
+]
