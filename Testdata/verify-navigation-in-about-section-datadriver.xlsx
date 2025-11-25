@@ -1,0 +1,30 @@
+[
+  {
+    "test_case_name": "TC_02_Valid_Login_And_About_Navigation",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "Company",
+    "Expected_Result": "Navigation successful"
+  },
+  {
+    "test_case_name": "TC_02_About_Tab_Missing",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "",
+    "Expected_Result": "Tab not found error"
+  },
+  {
+    "test_case_name": "TC_02_Invalid_Login_About_Navigation",
+    "Username": "alex.smith",
+    "Password": "wrongpass",
+    "About_Tab": "Company",
+    "Expected_Result": "Login failed"
+  },
+  {
+    "test_case_name": "TC_02_About_Tab_Invalid",
+    "Username": "alex.smith",
+    "Password": "Password123",
+    "About_Tab": "NonExistentTab",
+    "Expected_Result": "Tab not found error"
+  }
+]
