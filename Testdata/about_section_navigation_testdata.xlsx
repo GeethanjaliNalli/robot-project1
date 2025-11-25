@@ -1,0 +1,34 @@
+[
+  {
+    "test_case_name": "TC_01_AboutSection_ValidLoginAndNavigation",
+    "Username": "AutomationUser",
+    "Password": "autoPass123",
+    "Expected_Login_Status": "Success",
+    "Expected_AboutTabs": "All",
+    "Expected_AboutSection_Closed": "True"
+  },
+  {
+    "test_case_name": "TC_02_AboutSection_InvalidPassword",
+    "Username": "AutomationUser",
+    "Password": "wrongPass",
+    "Expected_Login_Status": "Failure",
+    "Expected_AboutTabs": "N/A",
+    "Expected_AboutSection_Closed": "False"
+  },
+  {
+    "test_case_name": "TC_03_AboutSection_InvalidUsername",
+    "Username": "WrongUser",
+    "Password": "autoPass123",
+    "Expected_Login_Status": "Failure",
+    "Expected_AboutTabs": "N/A",
+    "Expected_AboutSection_Closed": "False"
+  },
+  {
+    "test_case_name": "TC_04_AboutSection_BlankCredentials",
+    "Username": "",
+    "Password": "",
+    "Expected_Login_Status": "Failure",
+    "Expected_AboutTabs": "N/A",
+    "Expected_AboutSection_Closed": "False"
+  }
+]
