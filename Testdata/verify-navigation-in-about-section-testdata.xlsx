@@ -1,0 +1,37 @@
+[
+  {
+    "test_case_name": "TC_01 Verify Navigation in About Section With Valid Credentials",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "About_Tab": "Company Info",
+    "Expected_Result": "User navigates to Company Info tab successfully"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation in About Section - Team Members Tab",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "About_Tab": "Team Members",
+    "Expected_Result": "User navigates to Team Members tab successfully"
+  },
+  {
+    "test_case_name": "TC_03 Verify Navigation in About Section - Careers Tab",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "About_Tab": "Careers",
+    "Expected_Result": "User navigates to Careers tab successfully"
+  },
+  {
+    "test_case_name": "TC_04 Verify Navigation in About Section - Contact Us Tab",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "About_Tab": "Contact Us",
+    "Expected_Result": "User navigates to Contact Us tab successfully"
+  },
+  {
+    "test_case_name": "TC_05 Verify Navigation in About Section - Legal Notices Tab",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "About_Tab": "Legal Notices",
+    "Expected_Result": "User navigates to Legal Notices tab successfully"
+  }
+]
