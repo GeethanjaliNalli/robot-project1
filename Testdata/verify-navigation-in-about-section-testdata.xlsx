@@ -1,0 +1,26 @@
+[
+  {
+    "test_case_name": "TC_01 Verify Navigation in About Section with Valid Credentials",
+    "Username": "AutomationUser",
+    "Password": "Password123",
+    "Expected_Login_Status": "Success",
+    "Expected_Navigation_Result": "All tabs navigated successfully",
+    "Expected_About_Section_Closed": "True"
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation in About Section with Invalid Password",
+    "Username": "AutomationUser",
+    "Password": "WrongPassword",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Result": "Login failed",
+    "Expected_About_Section_Closed": "False"
+  },
+  {
+    "test_case_name": "TC_03 Verify Navigation in About Section with Missing Username",
+    "Username": "",
+    "Password": "Password123",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Result": "Login failed",
+    "Expected_About_Section_Closed": "False"
+  }
+]
