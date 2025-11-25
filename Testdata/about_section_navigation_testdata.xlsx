@@ -1,0 +1,5 @@
+[about_section_navigation]
+${test_case_name},Username,Password,Expected_Login_Status,Expected_About_Tabs,Expected_About_Closed
+TC_01 Verify Navigation in About Section,automation,auto123,Success,"Company,Team,Careers,Contact",True
+TC_02 About Section - Invalid Password,automation,wrongpass,Failure,,False
+TC_03 About Section - Invalid Username,wronguser,auto123,Failure,,False
