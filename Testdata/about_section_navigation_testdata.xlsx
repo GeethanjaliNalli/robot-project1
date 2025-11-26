@@ -1,0 +1,23 @@
+[
+  {
+    "test_case_name": "TC_01 Verify Navigation in About Section with Valid Credentials",
+    "Username": "AutomationUser",
+    "Password": "AutoPass123",
+    "Tab_To_Navigate": "Overview",
+    "Expected_Result": "User is able to navigate through all tabs in the About section and close it successfully."
+  },
+  {
+    "test_case_name": "TC_02 Verify Navigation in About Section with Invalid Password",
+    "Username": "AutomationUser",
+    "Password": "WrongPass",
+    "Tab_To_Navigate": "License",
+    "Expected_Result": "Invalid username or password"
+  },
+  {
+    "test_case_name": "TC_03 Verify Navigation in About Section with Invalid Username",
+    "Username": "WrongUser",
+    "Password": "AutoPass123",
+    "Tab_To_Navigate": "Privacy Policy",
+    "Expected_Result": "Invalid username or password"
+  }
+]
