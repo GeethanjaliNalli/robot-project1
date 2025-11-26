@@ -1,0 +1,29 @@
+[
+  {
+    "test_case_name": "TC_About_01_Valid_Login_And_Navigate_All_Tabs",
+    "Username": "aboutuser",
+    "Password": "About@123",
+    "Tab_Sequence": "Company Info,Terms & Conditions,Privacy Policy,Help,Contact Us",
+    "Expected_Login_Status": "Success",
+    "Expected_Navigation_Status": "All tabs navigated",
+    "Expected_About_Closed": "True"
+  },
+  {
+    "test_case_name": "TC_About_02_Invalid_Login",
+    "Username": "aboutuser",
+    "Password": "WrongPass",
+    "Tab_Sequence": "",
+    "Expected_Login_Status": "Failure",
+    "Expected_Navigation_Status": "",
+    "Expected_About_Closed": "False"
+  },
+  {
+    "test_case_name": "TC_About_03_Valid_Login_Missing_Tab",
+    "Username": "aboutuser",
+    "Password": "About@123",
+    "Tab_Sequence": "Company Info,Terms & Conditions,Help,Contact Us",
+    "Expected_Login_Status": "Success",
+    "Expected_Navigation_Status": "Partial tabs navigated",
+    "Expected_About_Closed": "True"
+  }
+]
