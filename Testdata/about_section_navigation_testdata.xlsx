@@ -1,0 +1,7 @@
+[["${test_case_name}","Username","Password","Tab_To_Navigate","Expected_Result"]
+,["TC_01 Verify Navigation to Company Tab","AboutUser","AboutPass123","Company","Navigation Successful"]
+,["TC_02 Verify Navigation to Team Tab","AboutUser","AboutPass123","Team","Navigation Successful"]
+,["TC_03 Verify Navigation to Careers Tab","AboutUser","AboutPass123","Careers","Navigation Successful"]
+,["TC_04 Verify Navigation to Contact Tab","AboutUser","AboutPass123","Contact","Navigation Successful"]
+,["TC_05 Verify Navigation to Legal Tab","AboutUser","AboutPass123","Legal","Navigation Successful"]
+]
