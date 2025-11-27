@@ -3,6 +3,8 @@ Documentation    This diary new patient booking Resource file has all the keywor
 Resource    ../common/super.resource
 
 *** Keywords ***
+# High-Level Keywords
+
 Navigate To Diary Screen
     [Documentation]    Navigates from the Dashboard to the Diary screen and validates that the Diary is displayed.
     Click Diary Link From Dashboard
@@ -127,7 +129,7 @@ Validate Required Field Validation Message For Booking Date
 Validate Booking Presence In Diary View
     [Documentation]    Validates that a booking matching the patient and booking details is present in the Diary view.
     [Arguments]    &{patient_info}    &{booking_info}
-    ${expected_patient_name}    Evaluate Expression    f"{'''${patient_info}[input.firstname]''' } {'''${patient_info}[input.lastname]'''}"
+    ${expected_patient_name}    Evaluate Expression    f"{'''${patient_info}[input.firstname]'''} {'''${patient_info}[input.lastname]'''}"
     ${cell_text}    Get Text    ${cell.diary.booking}
     Should Contain    ${cell_text}    ${patient_info}[input.lastname]
 
