@@ -1,5 +1,8 @@
-*** Variables ***
+*** Settings ***
+Documentation    This file contains the dictionaries for new patient booking data used in the test case: TC00002_Diary_NPB (New patient booking).
+Resource    ../common/super.resource
 
+*** Variables ***
 &{PATIENT_INFO_VALID}
 ...    input.firstname=John
 ...    input.lastname=Doe
