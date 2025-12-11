@@ -1,14 +1,12 @@
 *** Settings ***
-Documentation       This super.resource file has all imported Libraries and Resources
-Library             Collections
-Library             DateTime
-Library             OperatingSystem
-Library             String
-Library             Browser
-Library             ../library/CustomLibrary.py
-Resource            ../common/global_config.resource
-Resource            ../keywords/common_keywords.resource
-Resource            ../keywords/login_page.resource
-Resource            ../keywords/dashboard_page.resource
-Resource            ../objectrepository/login_page.resource
-Resource            ../objectrepository/dashboard_page.resource
+Library    CustomLibrary.py
+Resource   ../keywords/common_keywords.resource
+Resource   ../keywords/dashboard_page.resource
+Resource   ../keywords/login_page.resource
+Resource   ../objectrepository/dashboard_page.resource
+Resource   ../objectrepository/login_page.resource
+
+# Keyword file import for About Page
+Resource   ../../keywords/about_page.resource
+# Locator file import for About Page
+Resource   ../../objectrepository/about_page.resource
